@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
+//Function Prototype
 void student_data(void);
 void save_std_details(void);
 void view_std_details(void);
@@ -17,6 +18,8 @@ typedef struct student {
     char department[50];
 }student;
 
+
+//Function for see,save and delete student data
 void student_data(void)
 {
 
@@ -36,29 +39,30 @@ void student_data(void)
 
     switch (op_1) {
     case '1':
-        save_std_details();
+        save_std_details(); // Call the function to save student details
         break;
     case '2':
-        view_std_details();
+        view_std_details(); // Call the function to view student details
         break;
 
     case '3':
-        del_std();
+        del_std(); // Call the function to delete a student
         break;
     case '4':
-        home();
+        home(); // Go back to the home portal
         break;
      case '5':
-        ext();
+        ext(); // Exit the program
         break;
     default:
         printf("INVALID KEYWORD\n");
         Sleep(1000);
-        student_data();
+        student_data(); // Repeat the student data menu
   }
     return ;
 
 }
+// Function to save Students details
 void save_std_details(void) {
     char op_2;
     student std;
@@ -72,6 +76,7 @@ void save_std_details(void) {
         exit(1);
   }
     fflush(stdin);
+    //Take input of student data and save the data in text file
     printf("\n   \tEnter Student Name: ");
     gets(std.name);
     printf("\n   \tEnter Student ID: ");
@@ -96,20 +101,21 @@ void save_std_details(void) {
 
     switch (op_2) {
     case 'y':
-        save_std_details();
+        save_std_details(); // Continue saving more student details
         break;
     case 'n':
-        student_data();
+        student_data(); // Go back to the student data menu
         break;
     default:
         printf("\n\t\t\t\t  INVALID KEYWORD\n");
         Sleep(1000);
-        student_data();
+        student_data(); // Repeat the student data menu
 
   }
 
     return ;
 }
+//Function to read students details from text file and show the data.
 void view_std_details(void) {
     system("cls");
     student std;
@@ -138,22 +144,23 @@ void view_std_details(void) {
 
     switch (op_1) {
     case '1':
-        view_std_details();
+        view_std_details(); // View all students' information again
         break;
     case '2':
-        student_data();
+        student_data(); // Go back to the student data menu
         break;
-    case '3':
+    case '3': // Exit the program
         ext();
         break;
     default:
         printf("\n  INVALID KEYWORD\n");
         sleep(1000);
-        student_data();
+        student_data(); // Repeat the student data menu
     }
 
     return;
 }
+//Function for delete a student information from text file
 void del_std(void) {
     system("cls");
     printf("\n  Delete Student Information\n");
@@ -215,15 +222,15 @@ void del_std(void) {
     switch (op_1) {
 
     case '1':
-        student_data();
+        student_data(); // Go back to the student data menu
         break;
     case '2':
-        ext();
+        ext(); // Exit the program
         break;
     default:
         printf("\n  INVALID KEYWORD\n");
         sleep(1000);
-        student_data();
+        student_data(); // Repeat the student data menu
   }
     fflush(stdin);
     return ;
