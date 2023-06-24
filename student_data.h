@@ -30,7 +30,7 @@ void student_data(void)
     printf("\t\t\t\t\t ==> 1. Save Student Details\n");
     printf("\t\t\t\t\t ==> 2. View Student Details\n");
     printf("\t\t\t\t\t ==> 3. Delete Student\n");
-    printf("\t\t\t\t\t ==> 4. Log Out\n");
+    printf("\t\t\t\t\t ==> 4. Home Portal\n");
     printf("\t\t\t\t\t ==> 5. Exit\n\n\n");
 
     printf("\t\t\t\t\t   Select an Option:");
