@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-
+//Function Prototype
 void attendance_data(void);
 void search_attendance(void);
 void search_attendance1(int tdt);
@@ -26,6 +26,7 @@ typedef struct s_attendance2 {
     int att_count;
 }s_attendance2;
 
+//Function for taking student attendance
 void attendance_data(void) {
     system("cls");
     student std;
@@ -46,12 +47,13 @@ void attendance_data(void) {
 
       printf("\n\n\n\t\t\t\t\tEnter Current date[dd/mm/yyyy]:");
       scanf("%s", date);
+    // Check if attendance for the given date already exists
       while (fread( & s_att, sizeof(s_att), 1, chdate)) {
         if (strcmp(date, s_att.date) == 0) {
           found = 1;
     }
   }
-
+// Calculate attendance count based on user input
   if (found == 0) {
     while (fread( & std, sizeof(std), 1, fptr1)) {
       fflush(stdin);
@@ -120,11 +122,13 @@ void attendance_data(void) {
 
   return ;
 }
+//Function shows students attendance data
 void search_attendance(void) {
     int tdt = 0;
     s_attendance s_att;
     FILE * fptdt;
     fptdt = fopen("Attendance.txt", "r");
+    // Count the total number of attendance records
     while (fread( & s_att, sizeof(s_att), 1, fptdt)) {
     tdt = tdt + 1;
     }
@@ -182,7 +186,7 @@ void search_attendance1(int tdt) {
 
       return ;
 }
-
+//Search attendance data for individual student
 void search_student_attendance(void) {
     system("cls");
     student std;
