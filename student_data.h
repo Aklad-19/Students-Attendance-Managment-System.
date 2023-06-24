@@ -133,16 +133,16 @@ void view_std_details(void) {
 
     //EXIT_Switch
 
-    char op_1;
+    char end;
     printf("\n\n  Press 1 for View All Students Again\n");
     printf("  Press 2 for go to Back\n");
     printf("  Press 3 for EXIT Software\n");
     printf(" Select an Option:");
 
-    scanf("%c", &op_1);
-    //end = getche();
+    
+    end = getche();
 
-    switch (op_1) {
+    switch (end) {
     case '1':
         view_std_details(); // View all students' information again
         break;
