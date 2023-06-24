@@ -21,10 +21,10 @@
 int main(void)
 {
     int choice;
-    system("color F3");
-    splash_screen();
+    system("color F3"); // Set the console color to white text on cyan background
+    splash_screen(); // Display a splash screen or introductory message
     sleep(5);
-    system("cls");
+    system("cls"); // Clear the console screen
 
     printf("\n\n\n\n\n\n");
 
@@ -34,13 +34,13 @@ int main(void)
     scanf("%d", &choice);
     if(choice == 1)
     {
-        system("CLS");
-        registe();
+        system("cls");
+        registe();  // Call the 'registe' function for registration process
     }
     else if(choice ==2)
     {
-        system("CLS");
-        login();
+        system("cls");
+        login(); // Call the 'login' function for login process
     }else{
         printf("Invalid choice \n");
     }
