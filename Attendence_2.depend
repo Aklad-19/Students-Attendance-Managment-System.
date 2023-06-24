@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1687533932 source:c:\c project\attendence_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<unistd.h>
+	<dos.h>
+	<windows.h>
+	<conio.h>
+	"splashscreen.h"
+	"login.h"
+	"home.h"
+	"student_data.h"
+	"exit.h"
+	"attendence_data.h"
+
+1687446115 c:\c project\attendence_2\splashscreen.h
+	<stdio.h>
+	<time.h>
+
+1687586131 c:\c project\attendence_2\login.h
+	<stdio.h>
+	<string.h>
+
+1687586183 c:\c project\attendence_2\home.h
+	<stdio.h>
+
+1687534561 c:\c project\attendence_2\exit.h
+	<stdio.h>
+	<stdlib.h>
+
+1687586787 c:\c project\attendence_2\student_data.h
+	<stdio.h>
+	<string.h>
+
+1687587067 c:\c project\attendence_2\attendence_data.h
+	<stdio.h>
+
