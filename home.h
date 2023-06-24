@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+
+//Function Prototype
 void home(void);
 void attendance_data(void);
 void search_attendance(void);
@@ -11,7 +13,7 @@ void ext(void);
 
 
 
-
+//Function for Home Portal
 void home(void) {
     system("cls");
     char tswitch;
@@ -38,7 +40,7 @@ void home(void) {
         search_attendance();// Call the function for viewing attendance
         break;
     case '3':
-        search_student_attendance();
+        search_student_attendance();// Call the function for viewing attendence for a single student
         break;
 
     case '4':
